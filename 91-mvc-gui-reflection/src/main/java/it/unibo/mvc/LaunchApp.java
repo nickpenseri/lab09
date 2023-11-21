@@ -11,6 +11,7 @@ import it.unibo.mvc.model.DrawNumberImpl;
  */
 public final class LaunchApp {
 
+    
     private static final int NUMBER_OF_VIEWS = 3;
 
     private LaunchApp() { }
