@@ -7,13 +7,11 @@ import it.unibo.mvc.api.DrawResult;
 public class StdoutView implements DrawNumberView{
 
     private static final String NEW_GAME = "A new game starts";
-
-    private DrawNumberController controller;
     
 
     @Override
     public void setController(DrawNumberController observer) {
-        this.controller = observer;
+
     }
 
     @Override
@@ -24,9 +22,8 @@ public class StdoutView implements DrawNumberView{
     @Override
     public void result(DrawResult res) {
         System.out.println(res.getDescription());
-        if (res.equals(DrawResult.YOU_WON) || res.equals(DrawResult.YOU_WON)) {
+        if (res.equals(DrawResult.YOU_WON) || res.equals(DrawResult.YOU_LOST)) {
             System.out.println(NEW_GAME);
-            controller.resetGame();
         }
     }
 }
