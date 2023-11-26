@@ -38,7 +38,7 @@ public final class SimpleController implements Controller {
      */
     @Override
     public List<String> getHistory() {
-        return this.history;
+        return new ArrayList<>(this.history);
     }
 
     /**
